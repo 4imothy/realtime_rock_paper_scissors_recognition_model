@@ -1,4 +1,13 @@
-# Image Collection
+# Real Time Rock-Paper-Scissors Detector AI With [Tensorflow Object Detection](https://www.tensorflow.org/hub/tutorials/object_detection)
+
+Project created winter 2022-2023 to learn more about tensorflow.
+
+## How to set up a real time object detection project on Mac.
+
+The steps below took a lot from [Nicholas Renotte's](https://www.youtube.com/@NicholasRenotte) [tutorial](https://www.youtube.com/watch?v=yqkISICHH-U).
+
+
+### Image Collection
 1. Go to project directory and type
 ```
 python3 -m venv tfod
@@ -93,7 +102,7 @@ After that go to each image folder and make sure that there is a *.xml* file for
 
 9. Create two folders *train* and *test* in your images folder. Move most of the images and their *.xml* files to train and move some of the images and their associated *.xml* files to test.
 
-# Training
+### Training
 
 1. Clone the tensorflow models repository
 ```
