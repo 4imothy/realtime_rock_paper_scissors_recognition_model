@@ -6,6 +6,17 @@ Project created winter 2022-2023 to learn more about tensorflow.
 
 The steps below took a lot from [Nicholas Renotte's](https://www.youtube.com/@NicholasRenotte) [tutorial](https://www.youtube.com/watch?v=yqkISICHH-U).
 
+Create an issue if you have any questions.
+
+#### My versions:
+Python: 3.10.6
+openCV: 4.5.5.64
+tensorflow: 2.11.0
+tensorflow\_hub: 0.12.0
+tensorflow\_io: 0.29.0
+protobuf: 21.12
+protoc: 3.21.12
+qt@5: 5.15.7
 
 ### Image Collection
 1. Go to project directory and type
