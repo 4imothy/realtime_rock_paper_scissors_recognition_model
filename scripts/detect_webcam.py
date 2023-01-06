@@ -29,9 +29,12 @@ category_index = label_map_util.create_category_index_from_labelmap(os.path.join
 label_id_offset = 1
 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+output = cv2.VideoWriter('output.mp4',fourcc, 15.0,(320, 320))
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -67,5 +70,6 @@ while cap.isOpened():
 
     if cv2.waitKey(10) & 0xFF == ord('q'):
         cap.release()
+        output.release()
         cv2.destroyAllWindows()
         break
