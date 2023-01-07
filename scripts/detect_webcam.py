@@ -30,13 +30,12 @@ label_id_offset = 1
 
 
 cap = cv2.VideoCapture(1)
-width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+width = int(cap.get(3))
+height = int(cap.get(4))
 
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-output = cv2.VideoWriter('output.mp4',fourcc, 15.0,(320, 320))
+out = cv2.VideoWriter('output.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (width,height))
 
-while cap.isOpened():
+while True:
     ret, frame = cap.read()
     image_np = np.array(frame)
 
@@ -67,9 +66,12 @@ while cap.isOpened():
                 agnostic_mode=False)
 
     cv2.imshow('object detection',  cv2.resize(image_np_with_detections, (800, 600)))
+    out.write(image_np_with_detections)
 
-    if cv2.waitKey(10) & 0xFF == ord('q'):
-        cap.release()
-        output.release()
-        cv2.destroyAllWindows()
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+cap.release()
+out.release()
+cv2.destroyAllWindows()
+
