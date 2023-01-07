@@ -3,7 +3,7 @@
 Project created winter 2022-2023 to learn more about tensorflow.
 
 ### Demo
-![demo](./readme/output.mp4)
+![demo](./readme/demo.mov)
 
 ## How to set up a real time object detection project on Mac.
 
@@ -12,14 +12,14 @@ The steps below took a lot from [Nicholas Renotte's](https://www.youtube.com/@Ni
 Create an issue if you have any questions.
 
 #### My versions:
-Python: 3.10.6
-openCV: 4.5.5.64
-tensorflow: 2.11.0
-tensorflow\_hub: 0.12.0
-tensorflow\_io: 0.29.0
-protobuf: 21.12
-protoc: 3.21.12
-qt@5: 5.15.7
+- Python: 3.10.6
+- openCV: 4.5.5.64
+- tensorflow: 2.11.0
+- tensorflow\_hub: 0.12.0
+- tensorflow\_io: 0.29.0
+- protobuf: 21.12
+- protoc: 3.21.12
+- qt@5: 5.15.7
 
 ### Image Collection
 1. Go to project directory and type
