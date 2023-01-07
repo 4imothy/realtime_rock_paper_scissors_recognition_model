@@ -3,7 +3,7 @@
 Project created winter 2022-2023 to learn more about tensorflow.
 
 ### Demo
-![](https://github.com/4tlc/realtime_rock-paper-scissors_recognition_model/blob/main/readme/output.gif)
+![demo](./output.mp4)
 
 ## How to set up a real time object detection project on Mac.
 
