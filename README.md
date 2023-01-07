@@ -3,7 +3,7 @@
 Project created winter 2022-2023 to learn more about tensorflow.
 
 ### Demo
-![demo](./output.mp4)
+![demo](./readme/output.mp4)
 
 ## How to set up a real time object detection project on Mac.
 
