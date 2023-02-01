@@ -3,7 +3,10 @@
 Project created winter 2022-2023 to learn more about tensorflow.
 
 ### Demo
-![demo](./readme/demo.mov)
+
+
+https://user-images.githubusercontent.com/40186632/215922232-3d0b0e16-5c90-43ca-b8ed-bba62ac0a3eb.mp4
+
 
 ## How to set up a real time object detection project on Mac.
 
@@ -186,8 +189,7 @@ mv pretrained_model/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz models
 ```
 This will create a folder named *ssd\_mobilenet\_v2\_fpnlite\_320x320\_coco17\_tpu-8* in the models folder.
 
-6. Create a python script to create a label map.
-```
+6. Create a python script to create a label map.```
 import os
 
 CUSTOM_MODEL_NAME = 'my_ssd_mobnet'
