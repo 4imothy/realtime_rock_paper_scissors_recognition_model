@@ -8,9 +8,7 @@ Project created winter 2022-2023 to learn more about tensorflow.
 https://user-images.githubusercontent.com/40186632/215922232-3d0b0e16-5c90-43ca-b8ed-bba62ac0a3eb.mp4
 
 
-## How to set up a real time object detection project on Mac.
-
-The tutorial below takes a lot from [Nicholas Renotte's](https://www.youtube.com/@NicholasRenotte) [tutorial](https://www.youtube.com/watch?v=yqkISICHH-U).
+## How to set up a real time object detection project on Mac. 
 
 Create an issue if you have any questions.
 
