@@ -187,7 +187,8 @@ mv pretrained_model/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz models
 ```
 This will create a folder named *ssd\_mobilenet\_v2\_fpnlite\_320x320\_coco17\_tpu-8* in the models folder.
 
-6. Create a python script to create a label map.```
+6. Create a python script to create a label map.
+```
 import os
 
 CUSTOM_MODEL_NAME = 'my_ssd_mobnet'
@@ -205,26 +206,32 @@ with open(files['LABELMAP'], 'w') as f:
         f.write('\tid:{}\n'.format(label['id']))
         f.write('}\n')
 ```
+
 Create the directory *annotations* for the map to be stored in.
 Then run the code.
 
 7. Clone this repo to create tf records:
+
 ```
 git clone https://github.com/nicknochnack/GenerateTFRecord
 ```
+
 Run these lines to make the images tf records.
+
 ```
 python GenerateTFRecord/generate_tfrecord.py -x images/train -l annotations/label_map.pbtxt -o annotations/train.record
 python GenerateTFRecord/generate_tfrecord.py -x images/test -l annotations/label_map.pbtxt -o annotations/test.record
 ```
 
 8. Create a folder for your learner and copy the *pipeline.config* file to it.
+
 ```
 mkdir learner
 cp models/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8/pipeline.config learner
 ```
 
 9. Create a new file that will configure the learner for our project. Add these lines:
+
 ```
 import tensorflow as tf
 import os
@@ -256,15 +263,19 @@ with tf.io.gfile.GFile("learner/pipeline.config", "wb") as f:
 Run the file to configure. Might be warnings.
 
 10. Train the model by running this command.
+
 ```
 python models/research/object_detection/model_main_tf2.py --model_dir=learner --pipeline_config_path=learner/pipeline.config --num_train_steps=3000
 ```
+
 If you get errors about missing modules just install them.
+
 ```
 pip install lvis
 ```
 
 11. Evaluate the model with this command
+
 ```
 python models/research/object_detection/model_main_tf2.py --model_dir=learner --pipeline_config_path=learner/pipeline.config --checkpoint_dir=learner
 ```
